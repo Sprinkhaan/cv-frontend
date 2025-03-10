@@ -1,0 +1,196 @@
+/* ==============================
+   🌟 Moderne en Strakke Styling
+   ============================== */
+
+/* Algemene stijlen */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+  color: #1a1a1a;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==============================
+ 🔹 Navbar Styling
+ ============================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3182ce;
+}
+
+nav a.active {
+  color: #3182ce;
+  border-bottom: 2px solid #3182ce;
+}
+
+/* ==============================
+ 🎯 Hero Section Styling
+ ============================== */
+#hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+#hero a {
+  background-color: #ffffff;
+  color: #3182ce;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#hero a:hover {
+  background-color: #ebf8ff;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+ 🏆 Sectie Styling
+ ============================== */
+ section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 60px; /* Minder padding voor minder afstand */
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2d3748;
+}
+
+section p {
+  font-size: 1.125rem;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+ ⭐ Skills Styling
+ ============================== */
+ .skill-bar {
+  width: 100%;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  background: linear-gradient(to right, #3182ce, #63b3ed);
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+
+/* ==============================
+ 🎬 Animaties
+ ============================== */
+ @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Startpositie van de animatie */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+}
+
+/* Sectie wordt zichtbaar wanneer deze in beeld komt */
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+ 📱 Responsieve Aanpassingen
+ ============================== */
+@media (max-width: 768px) {
+  section {
+      padding: 80px 0;
+  }
+
+  #hero h1 {
+      font-size: 2.5rem;
+  }
+
+  #hero p {
+      font-size: 1rem;
+  }
+
+  nav a {
+      font-size: 0.875rem;
+      margin: 0 0.5rem;
+  }
+}
