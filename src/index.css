@@ -11,7 +11,7 @@ body {
   background-color: #f9fafb;
   color: #1a1a1a;
   line-height: 1.6;
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -103,9 +103,9 @@ nav a.active {
 /* ==============================
  🏆 Sectie Styling
  ============================== */
- section {
+section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 60px; /* Minder padding voor minder afstand */
+  padding-bottom: 60px;
 }
 
 section h2 {
@@ -116,20 +116,92 @@ section h2 {
   color: #2d3748;
 }
 
-section p {
-  font-size: 1.125rem;
-  color: #4a5568;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.8;
-  margin-bottom: 20px;
+/* ==============================
+ 🎨 Projecten Grid Layout
+ ============================== */
+ .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
+
+/* ==============================
+ 🎨 Projecten Grid Layout
+ ============================== */
+ .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kleinere kolombreedte */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1000px; /* Voorkomt dat de grid te breed wordt */
+  margin: 0 auto; /* Centreert de grid */
+}
+
+/* ==============================
+ 📝 Project Card Styling
+ ============================== */
+.project-card {
+  background: white;
+  width: 100%;
+  max-width: 300px; /* Beperkt de breedte van de kaarten */
+  height: 400px; /* Maakt de kaarten langer */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #f1f5f9;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.project-card .tech-stack {
+  font-size: 0.9rem;
+  color: #636363;
+}
+
+.project-card .view-project {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #3182ce;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .view-project {
+  color: #63b3ed;
+}
+
 
 /* ==============================
  ⭐ Skills Styling
  ============================== */
- .skill-bar {
+.skill-bar {
   width: 100%;
   background-color: #e2e8f0;
   border-radius: 5px;
@@ -145,11 +217,10 @@ section p {
   transition: width 0.5s ease-in-out;
 }
 
-
 /* ==============================
  🎬 Animaties
  ============================== */
- @keyframes fadeInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -160,14 +231,12 @@ section p {
   }
 }
 
-/* Startpositie van de animatie */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1.8s ease-out, transform 1.8s ease-out;
 }
 
-/* Sectie wordt zichtbaar wanneer deze in beeld komt */
 .fade-in-up.show {
   opacity: 1;
   transform: translateY(0);
@@ -178,19 +247,19 @@ section p {
  ============================== */
 @media (max-width: 768px) {
   section {
-      padding: 80px 0;
+    padding: 80px 0;
   }
 
   #hero h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   #hero p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   nav a {
-      font-size: 0.875rem;
-      margin: 0 0.5rem;
+    font-size: 0.875rem;
+    margin: 0 0.5rem;
   }
 }
